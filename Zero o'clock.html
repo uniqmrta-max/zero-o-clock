@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happiest Birthday ndut ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#030712;color:#fff;overflow-x:hidden}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 18px;position:relative;overflow:hidden}
+.content{position:relative;z-index:3;width:min(700px,100%);text-align:center}
+.galaxy{background:
+radial-gradient(ellipse at 50% 45%,rgba(255,255,255,.16),transparent 8%),
+radial-gradient(ellipse at 50% 48%,rgba(108,71,180,.34),transparent 30%),
+radial-gradient(ellipse at 50% 48%,rgba(26,79,170,.25),transparent 48%),
+radial-gradient(circle at 78% 18%,rgba(182,116,255,.28),transparent 24%),
+radial-gradient(circle at 20% 75%,rgba(43,100,255,.22),transparent 28%),
+linear-gradient(160deg,#01030b,#07112a 52%,#170d2d)}
+.stars{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{from{opacity:.2;transform:scale(.6)}to{opacity:1;transform:scale(1.4)}}
+h1,h2{font-family:Georgia,serif;font-weight:400}
+.hero h1{font-size:clamp(54px,15vw,96px);line-height:.92;color:#f8ead8}
+.hero p{margin:22px 0;font-size:12px;letter-spacing:.14em;opacity:.7}
+.heart{font-size:24px;margin:15px 0}
+.btn{border:1px solid rgba(255,255,255,.65);background:rgba(255,255,255,.06);color:white;padding:13px 24px;border-radius:999px;cursor:pointer;margin-top:18px}
+.btn.gold{background:#f4e8d6;color:#111827;border-color:#f4e8d6;font-weight:700}
+.letter-page{background:linear-gradient(#0b1220,#08101d)}
+.paper{background:linear-gradient(145deg,#fff8ea,#e9dcc7);color:#1f2937;border-radius:22px;padding:34px 24px;text-align:left;box-shadow:0 28px 80px rgba(0,0,0,.4)}
+.paper h2{text-align:center;font-size:42px;margin-bottom:24px}
+.paper p{font-size:14px;line-height:1.9;margin:13px 0}
+.arabic{text-align:center;font-size:34px;margin:16px 0;font-family:serif}
+.captain{margin:20px auto;width:190px;padding:18px;border:1px solid rgba(0,0,0,.12);border-radius:16px;text-align:center;background:rgba(255,255,255,.45)}
+.captain .icons{font-size:38px}
+.captain small{display:block;margin-top:8px;letter-spacing:.15em;opacity:.65}
+.music-card,.closing-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:26px;padding:32px 22px;backdrop-filter:blur(10px)}
+.disc{width:145px;height:145px;border-radius:50%;margin:0 auto 24px;background:radial-gradient(circle,#f5e7d0 0 7%,#9b7bb4 8% 16%,#111827 17% 35%,#312e81 36% 55%,#0f172a 56% 100%);animation:spin 5s linear infinite paused;box-shadow:0 0 60px rgba(139,92,246,.35)}
+.disc.playing{animation-play-state:running}
+@keyframes spin{to{transform:rotate(360deg)}}
+.music-card h2{font-size:44px;color:#f8ead8}
+.music-card p{font-size:13px;opacity:.68;margin-top:8px}
+.note{font-size:11px;opacity:.5;margin-top:12px}
+.closing-wrap{min-height:100vh;position:relative}
+.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px 18px;opacity:0;pointer-events:none;transition:.5s}
+.slide.active{opacity:1;pointer-events:auto}
+.closing-card{width:min(620px,100%);text-align:center}
+.closing-card h2{font-size:48px;color:#f8ead8;margin-bottom:20px}
+.closing-card p{font-size:17px;line-height:1.7}
+.gift{font-size:56px;margin:18px 0}
+.dots{display:flex;gap:7px;justify-content:center;margin:20px 0}
+.dot{width:7px;height:7px;border-radius:50%;border:1px solid #fff}.dot.on{background:#fff}
+footer{text-align:center;padding:18px;background:#030712;font-size:10px;opacity:.4;letter-spacing:.12em}
+@media(max-width:480px){.paper{padding:28px 19px}.paper h2{font-size:36px}.paper p{font-size:13px}.closing-card p{font-size:15px}}
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<section class="page galaxy hero">
+  <div class="content">
+    <div style="font-size:10px;letter-spacing:.25em;opacity:.65;margin-bottom:18px">A LITTLE UNIVERSE FOR YOU</div>
+    <h1>Happiest<br>Birthday<br><em>ndut</em> ❤️</h1>
+    <div class="heart">✦ ♡ ✦</div>
+    <p>YOU ARE MY FAVORITE PERSON IN THIS UNIVERSE</p>
+    <button class="btn" onclick="document.getElementById('letter').scrollIntoView()">Buka 💌</button>
+  </div>
+</section>
+
+<section class="page letter-page" id="letter">
+  <div class="content">
+    <div class="paper">
+      <h2>Happy Birthday, ndut! 🤍🎂</h2>
+      <p>Semoga di umur yang baru ini kamu selalu diberikan kesehatan, kebahagiaan, dan selalu berada dalam perlindungan Allah SWT.</p>
+      <p>Semoga semua urusanmu dilancarkan, rezekimu dimudahkan, dan apa pun yang sedang kamu perjuangkan bisa perlahan-lahan tercapai.</p>
+      <p>Semoga kariermu juga semakin lancar, semakin sukses, dan selalu diberikan jalan terbaik untuk setiap langkah yang kamu ambil.</p>
+      <p>Makasih yaa, so far kamu udah mengusahakan jadi lebih baik untuk diri kamu sendiri. Jangan terlalu keras sama diri sendiri tapii yowww.</p>
+      <div class="captain">
+        <div class="icons">🌌 ✨ 🪐</div>
+        <small>KEEP SHINING IN YOUR OWN UNIVERSE</small>
+      </div>
+      <p><strong>Once again, happiest birthday! ❤️</strong></p>
+      <p>Semoga tahun ini menjadi tahun yang jauh lebih baik buat gemblunk. 🫶🏻</p>
+    </div>
+  </div>
+</section>
+
+<section class="page galaxy">
+  <div class="content">
+    <div class="music-card">
+      <div class="disc" id="disc"></div>
+      <h2>Putar Musik 🎵</h2>
+      <p>Birthday tune — cheerful kids version</p>
+      <button class="btn gold" id="musicBtn">▶ Putar lagu</button>
+      <div class="note">Musik dibuat langsung dari browser, jadi tidak perlu file MP3.</div>
+    </div>
+  </div>
+</section>
+
+<section class="closing-wrap galaxy">
+  <div class="slide active" id="slide1">
+    <div class="closing-card">
+      <h2>Pesan buat ndut</h2>
+      <p>G pny pikiran ngado apa,<br>kayanya aku udh jadi kado terbaikmu g si.</p>
+      <div class="dots"><span class="dot on"></span><span class="dot"></span></div>
+      <button class="btn" onclick="nextSlide()">Lanjut →</button>
+    </div>
+  </div>
+
+  <div class="slide" id="slide2">
+    <div class="closing-card">
+      <h2>Bercandaa…</h2>
+      <p>Bercandaa kado nyaa otiwiii,<br><em>hope you'll like it ♡</em></p>
+      <div class="gift">🎁</div>
+      <div class="dots"><span class="dot"></span><span class="dot on"></span></div>
+      <button class="btn gold" onclick="burstHearts()">❤️</button>
+    </div>
+  </div>
+</section>
+
+<footer>MADE WITH LOVE FOR NDUT ♡</footer>
+
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<180;i++){
+ const s=document.createElement('span'); s.className='star';
+ const size=Math.random()*2.3+1;
+ s.style.width=size+'px'; s.style.height=size+'px';
+ s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%';
+ s.style.animationDelay=Math.random()*3+'s'; stars.appendChild(s);
+}
+
+let audioCtx=null, playing=false, timer=null;
+const melody=[
+[392,.25],[392,.25],[440,.5],[392,.5],[523,.5],[494,1],
+[392,.25],[392,.25],[440,.5],[392,.5],[587,.5],[523,1],
+[392,.25],[392,.25],[784,.5],[659,.5],[523,.5],[494,.5],[440,1],
+[698,.25],[698,.25],[659,.5],[523,.5],[587,.5],[523,1]
+];
+function tone(freq,start,dur){
+ const o=audioCtx.createOscillator(),g=audioCtx.createGain();
+ o.type='sine';o.frequency.value=freq;
+ g.gain.setValueAtTime(.0001,start);
+ g.gain.exponentialRampToValueAtTime(.1,start+.02);
+ g.gain.exponentialRampToValueAtTime(.0001,start+dur*.9);
+ o.connect(g);g.connect(audioCtx.destination);o.start(start);o.stop(start+dur);
+}
+function playLoop(){
+ if(!playing)return;
+ let t=audioCtx.currentTime+.05,total=0;
+ melody.forEach(([f,d])=>{tone(f,t+total,d*.88);total+=d});
+ timer=setTimeout(playLoop,total*1000+120);
+}
+const btn=document.getElementById('musicBtn'),disc=document.getElementById('disc');
+btn.onclick=()=>{
+ if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+ if(!playing){playing=true;audioCtx.resume();playLoop();btn.textContent='❚❚ Jeda lagu';disc.classList.add('playing')}
+ else{playing=false;clearTimeout(timer);btn.textContent='▶ Putar lagu';disc.classList.remove('playing')}
+};
+function nextSlide(){
+ document.getElementById('slide1').classList.remove('active');
+ document.getElementById('slide2').classList.add('active');
+}
+function burstHearts(){
+ const arr=['❤️','💗','♡','✨'];
+ for(let i=0;i<30;i++){
+   const h=document.createElement('span');
+   h.textContent=arr[Math.floor(Math.random()*arr.length)];
+   h.style.position='fixed';h.style.left=(10+Math.random()*80)+'vw';h.style.bottom='-30px';
+   h.style.fontSize=(16+Math.random()*22)+'px';h.style.zIndex='99';h.style.transition='2.3s ease-out';h.style.pointerEvents='none';
+   document.body.appendChild(h);
+   requestAnimationFrame(()=>requestAnimationFrame(()=>{
+     h.style.transform=`translateY(-${80+Math.random()*20}vh) rotate(${Math.random()*90-45}deg)`;
+     h.style.opacity='0';
+   }));
+   setTimeout(()=>h.remove(),2500);
+ }
+}
+</script>
+</body>
+</html>
