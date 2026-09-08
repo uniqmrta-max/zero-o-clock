@@ -93,7 +93,11 @@ footer{text-align:center;padding:18px;background:#030712;font-size:10px;opacity:
       <h2>Putar Musik 🎵</h2>
       <p>Birthday tune — cheerful kids version</p>
       <button class="btn gold" id="musicBtn">▶ Putar lagu</button>
-      <div class="note">Musik dibuat langsung dari browser, jadi tidak perlu file MP3.</div>
+      <div class="note">Tekan tombol Putar lagu untuk mendengarkan lagu 🎂🎵</div>
+
+<audio id="birthdayAudio" loop>
+  <source src="nastelbom-happy-birthday-495860.mp3" type="audio/mpeg">
+</audio>
     </div>
   </div>
 </section>
@@ -131,33 +135,28 @@ for(let i=0;i<180;i++){
  s.style.animationDelay=Math.random()*3+'s'; stars.appendChild(s);
 }
 
-let audioCtx=null, playing=false, timer=null;
-const melody=[
-[392,.25],[392,.25],[440,.5],[392,.5],[523,.5],[494,1],
-[392,.25],[392,.25],[440,.5],[392,.5],[587,.5],[523,1],
-[392,.25],[392,.25],[784,.5],[659,.5],[523,.5],[494,.5],[440,1],
-[698,.25],[698,.25],[659,.5],[523,.5],[587,.5],[523,1]
-];
-function tone(freq,start,dur){
- const o=audioCtx.createOscillator(),g=audioCtx.createGain();
- o.type='sine';o.frequency.value=freq;
- g.gain.setValueAtTime(.0001,start);
- g.gain.exponentialRampToValueAtTime(.1,start+.02);
- g.gain.exponentialRampToValueAtTime(.0001,start+dur*.9);
- o.connect(g);g.connect(audioCtx.destination);o.start(start);o.stop(start+dur);
-}
-function playLoop(){
- if(!playing)return;
- let t=audioCtx.currentTime+.05,total=0;
- melody.forEach(([f,d])=>{tone(f,t+total,d*.88);total+=d});
- timer=setTimeout(playLoop,total*1000+120);
-}
-const btn=document.getElementById('musicBtn'),disc=document.getElementById('disc');
-btn.onclick=()=>{
- if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
- if(!playing){playing=true;audioCtx.resume();playLoop();btn.textContent='❚❚ Jeda lagu';disc.classList.add('playing')}
- else{playing=false;clearTimeout(timer);btn.textContent='▶ Putar lagu';disc.classList.remove('playing')}
-};
+const btn = document.getElementById('musicBtn');
+const disc = document.getElementById('disc');
+const birthdayAudio = document.getElementById('birthdayAudio');
+
+birthdayAudio.loop = true;
+
+btn.addEventListener('click', async function() {
+  try {
+    if (birthdayAudio.paused) {
+      await birthdayAudio.play();
+      btn.textContent = '❚❚ Jeda lagu';
+      disc.classList.add('playing');
+    } else {
+      birthdayAudio.pause();
+      btn.textContent = '▶ Putar lagu';
+      disc.classList.remove('playing');
+    }
+  } catch (error) {
+    console.error(error);
+    btn.textContent = '▶ Coba putar lagi';
+  }
+});
 function nextSlide(){
  document.getElementById('slide1').classList.remove('active');
  document.getElementById('slide2').classList.add('active');
